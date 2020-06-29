@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="surveys">
+    <file>Resources/market.png</file>
+    <file>Resources/person.png</file>
+    <file>Resources/supermarket.png</file>
+  </qresource>
+</RCC>

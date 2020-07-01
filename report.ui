@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>608</width>
-    <height>571</height>
+    <width>647</width>
+    <height>619</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -473,6 +473,24 @@ text-align:&quot;center&quot;;</string>
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>570</y>
+     <width>511</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(85, 85, 255);
+color: white;
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Print PDF</string>
+   </property>
   </widget>
  </widget>
  <resources/>

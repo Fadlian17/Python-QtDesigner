@@ -1,6 +1,8 @@
+import json
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
-import json
+from PyQt5.QtPrintSupport import QPrintDialog, QPrinter, QAbstractPrintDialog
+from PyQt5.QtChart import QtCharts
 
 
 class loginSurvey(QWidget):
@@ -54,14 +56,14 @@ class App(QWidget):
         self.stackedLayout.addWidget(self.result)
         self.favoriteItem = ""
 
-        self.form.comboBox1.activated.connect(self.valueCombo)
+        self.form.comboBox1.activated.connect(self.valueCombo1)
 
     def mainLayout(self):
         self.layout = QVBoxLayout()
         self.layout.addLayout(self.stackedLayout)
         self.setLayout(self.layout)
 
-    def valueCombo(self, index):
+    def valueCombo1(self, index):
         self.favoriteItem = self.form.comboBox1.itemText(index)
 
     def values(self):
@@ -136,6 +138,7 @@ class App(QWidget):
         self.login.pushButton.clicked.connect(self.act_login)
         self.form.pushButton.clicked.connect(self.act_form)
         self.result.pushButton.clicked.connect(self.addToJson)
+        self.result.pushButton_2.clicked.connect(self.printPdf)
 
     def addToJson(self):
         data = self.values()
@@ -143,6 +146,12 @@ class App(QWidget):
         fwrite = open('survey.json', 'w')
         fwrite.write(toJson)
         QMessageBox.information(self, "About", "Export to Json Success")
+
+    def printToPdf(self):
+        self.printPdf = QPrinter()
+        self.dialog = QPrintDialog(self.printPdf)
+        if self.dialog.exec_() == QPrintDialog.accepted:
+            self.result.document().print_(self.printPdf)
 
     def getData(self):
         data = open("datas.json")

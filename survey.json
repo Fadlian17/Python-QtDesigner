@@ -1,13 +1,13 @@
 {
     "favorite_item": "",
-    "kelengkapan_stok": 0,
-    "toilet": 0,
-    "rak_makanan": 0,
-    "rak_buah": 0,
-    "rak_pecah_belah": 0,
-    "refrigator": 0,
-    "lantai_toko": 0,
-    "lokasi_strategis": 0,
-    "lahan_parkir": "",
-    "saran_masukan": "adad"
+    "kelengkapan_stok": 10,
+    "toilet": 10,
+    "rak_makanan": 8,
+    "rak_buah": 9,
+    "rak_pecah_belah": 10,
+    "refrigator": 8,
+    "lantai_toko": 7,
+    "lokasi_strategis": 59,
+    "lahan_parkir": "Nyaman",
+    "saran_masukan": "Est ea excepteur eu excepteur eu cillum occaecat."
 }

@@ -114,11 +114,12 @@ class App(QMainWindow):
         axisX.append(name)
 
         axisY = QValueAxis()
-        axisY.setRange(0, 950)
+        axisY.setRange(0, 200)
 
         chart.addAxis(axisX, Qt.AlignBottom)
         chart.addAxis(axisY, Qt.AlignLeft)
         chartView = QChartView(chart)
+        chartView.setFixedSize(1200, 800)
         return chartView
 
     def valueCombo1(self, index):
